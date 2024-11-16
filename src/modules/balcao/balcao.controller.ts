@@ -14,8 +14,12 @@ export class BalcaoController {
   }
 
   @Get(':id')
-  async getBalcao(@Param('id', ParseIntPipe) id: number): Promise<Balcao> {
+  async getBalcaoId(@Param('id', ParseIntPipe) id: number): Promise<Balcao> {
     return this.balcaoService.getBalcao(id);
+  }
+  @Get(':nome')
+  async getBalcaoName(@Param('nome') nome: string): Promise<Balcao> {
+    return this.balcaoService.getBalcaoName(nome);
   }
 
   @Post()

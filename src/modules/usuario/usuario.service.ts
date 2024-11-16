@@ -11,8 +11,15 @@ export class UserService {
     private readonly userRepository: Repository<Usuario>,
   ) {}
 
-  async getUser(id: number): Promise<Usuario> {
+  async obterUsuario(id: number): Promise<Usuario> {
     const user = await this.userRepository.findOneBy({ id: id });
+    if (!user) {
+      throw new NotFoundException('Usuário não Encontrado');
+    }
+    return user;
+  }
+  async obterUsuarioEmail(email: string): Promise<Usuario> {
+    const user = await this.userRepository.findOneBy({ email: email });
     if (!user) {
       throw new NotFoundException('Usuário não Encontrado');
     }
