@@ -1,0 +1,19 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "usernamehw.errorlens",
+        "PKief.material-icon-theme",
+        "ms-vscode-remote.remote-wsl",
+        "EditorConfig.EditorConfig",
+        "eamodio.gitlens",
+        "liamhammett.inline-parameters",
+        "yzhang.markdown-all-in-one",   
+        "dbaeumer.vscode-eslint",
+        "GitHub.vscode-pull-request-github",
+        "christian-kohler.npm-intellisense",
+        "github.vscode-github-actions",
+        "github.copilot",
+        "ms-ceintl.vscode-language-pack-pt-br",
+        "rangav.vscode-thunder-client"
+    ]
+}
