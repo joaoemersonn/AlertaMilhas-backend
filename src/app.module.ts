@@ -9,6 +9,7 @@ import { CrawlerModule } from './crawler/crawler.module';
 import { UserModule } from './modules/usuario/usuario.module';
 import { BalcaoModule } from './modules/balcao/balcao.module';
 import { CotacaoModule } from './modules/cotacao/cotacao.module';
+import { PromocaoModule } from './modules/promocao/promocao.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { CotacaoModule } from './modules/cotacao/cotacao.module';
     UserModule,
     BalcaoModule,
     CotacaoModule,
+    PromocaoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
