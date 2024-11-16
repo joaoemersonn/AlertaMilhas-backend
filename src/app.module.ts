@@ -8,6 +8,7 @@ import { AppService } from './app.service';
 import { CrawlerModule } from './crawler/crawler.module';
 import { UserModule } from './modules/usuario/usuario.module';
 import { BalcaoModule } from './modules/balcao/balcao.module';
+import { CotacaoModule } from './modules/cotacao/cotacao.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { BalcaoModule } from './modules/balcao/balcao.module';
     CrawlerModule,
     UserModule,
     BalcaoModule,
+    CotacaoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
