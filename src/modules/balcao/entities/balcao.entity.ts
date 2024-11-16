@@ -11,6 +11,7 @@ export class Balcao {
   @Column({
     type: 'varchar',
     length: 100,
+    unique: true,
     comment: 'Nome do balcão, até 100 caracteres',
   })
   @ApiProperty({ description: 'Nome do balcão, até 100 caracteres', example: 'Hotmilhas' })
