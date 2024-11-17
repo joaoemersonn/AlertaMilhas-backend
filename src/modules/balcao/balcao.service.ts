@@ -26,6 +26,13 @@ export class BalcaoService {
     }
     return listaBalcao;
   }
+  getBalcaoName(nome: string): Balcao | Promise<Balcao> {
+    const listaBalcao = this.balcaoRepository.findOneBy({ nome: nome });
+    if (!listaBalcao) {
+      throw new NotFoundException('Balcão Encontrado');
+    }
+    return listaBalcao;
+  }
 
   async criarBalcao(createBalcaoDto: CriarBalcaoDto): Promise<Balcao> {
     // Cria a instância do balcão com os dados recebidos

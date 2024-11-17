@@ -8,8 +8,12 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Get(':id')
-  async getUser(@Param('id', ParseIntPipe) id: number) {
-    return this.userService.getUser(id);
+  async obterUsuario(@Param('id', ParseIntPipe) id: number) {
+    return this.userService.obterUsuario(id);
+  }
+  @Get(':nome')
+  async obterUsuarioEmail(@Param('nome') nome: string) {
+    return this.userService.obterUsuarioEmail(nome);
   }
 
   @Post()
